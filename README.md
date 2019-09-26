@@ -89,3 +89,17 @@ buttons: [
 ### PREVIEW
 
 ![alt text](https://github.com/Mahesh-Ranaweera/POPjs/blob/master/preview/preview_1.png "Preview 1")
+
+### COMPILE
+
+```sh
+#install webpack
+npm install
+npm install webpack --save-dev
+npm install webpack-cli --save-dev
+> webpack
+
+# or simply on linux
+sudo apt-get install webpack
+> webpack
+```
