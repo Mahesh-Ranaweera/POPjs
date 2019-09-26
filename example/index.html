@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <button onclick='show_modal();'>ShowModal</button>
+    </body>
+    <script src="../dest/popupjs.js"></script>
+    <script>
+        let content = '<h1>Hello World</h1><p>This rest of the content</p>';
+        function show_modal() {
+            new POPUP.modal({
+                width: 'auto',
+                height: 'auto',
+                heading: 'Save Data',
+                content: 'These are some content to be shown',
+                showClose: true,
+                bgOpacity: 0.21,
+                buttons: [
+                    {
+                        text: 'OK',
+                        class: 'primary',
+                        callback: '_ok',
+                    },
+                    {
+                        text: 'Cancel',
+                        class: 'secondary',
+                        callback: '_cancel'
+                    },
+                    {
+                        text: 'Save',
+                        class: 'red',
+                        callback: '_save'
+                    }
+                ]
+            })
+            .then(function(res){
+                console.log(res);
+
+                if( res == 'closed' ) {
+                    new POPUP.modal({
+                        heading: 'Safely Closed',
+                        content: content
+                    });
+                }
+            });
+        }
+    </script>
+</html>

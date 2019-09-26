@@ -1,0 +1,189 @@
+html, body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.popup--wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    position: fixed;
+    display: block;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.64);
+    z-index: 100000;
+}
+
+.popup--content {
+    width: 100%;
+    min-width: 240px;
+    max-width: 600px;
+
+    font-family: monospace;
+
+    max-height: calc(100% - 100px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100500;
+
+    background-color: #FFF;
+    padding: 20px;
+    box-sizing: border-box;
+    display: block;
+
+    border-radius: 2.5px;
+    transition: all .2s cubic-bezier(.4,0,.2,1);
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+
+    &:hover {
+        box-shadow: 0 8px 10px -5px rgba(0,0,0,.2), 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12);
+    }
+
+    .popup--section:not(:first-child) {
+        border-top: 1px solid #EEE;
+    }
+
+    .popup--header, .popup--body, .popup--footer {
+        width: 100%;
+        min-height: 40px;
+        float: left;
+    }
+
+    .popup--header {
+        display: flex;
+
+        .--header--text {
+            width: 100%;
+            line-height: 45px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .--header--btn {
+            width: 40px;
+            height: 40px;
+            float: right;
+            line-height: 40px;
+            text-align: center;
+            cursor: pointer;
+            color: #485a6c;
+
+            &:hover {
+                color: #273445;
+            }
+
+            svg {
+                pointer-events: none;
+            }
+        }
+    }
+
+    .popup--body {
+        height: auto;
+        font-size: 14px;
+        padding: 10px 0px 10px 0px;
+    }
+
+    .popup--footer {
+        height: auto;
+        font-size: 14px;
+        padding: 10px 0px 10px 0px;
+        display: flex;
+        justify-content: space-between;
+
+        .popup--button {
+            width: 100%;
+            height: 40px;
+            font-size: 16px;
+            border-style: none;
+            float: left;
+            border-radius: 2.5px;
+            cursor: pointer;
+            transition: all .2s cubic-bezier(.4,0,.2,1);
+        }
+
+        .popup--button:not(:last-child) {
+            margin-right:10px;
+        }
+
+        .primary, .blue {
+            background-color: #3689e6;
+            color: #FFF;
+            &:hover {
+                background-color: #0d52bf;
+            }
+            &:active {
+                background-color: #002e99;
+            }
+        }
+
+        .secondary, .gray {
+            background-color: #667885;
+            color: #FFF;
+            &:hover {
+                background-color: #485a6c;
+            }
+            &:active {
+                background-color: #273445;
+            }
+        }
+
+        .danger, .red {
+            background-color: #ed5353;
+            color: #FFF;
+            &:hover {
+                background-color: #c6262e;
+            }
+            &:active {
+                background-color: #a10705;
+            }
+        }
+
+        .warning, .orange {
+            background-color: #ffa154;
+            color: #FFF;
+            &:hover {
+                background-color: #f37329;
+            }
+            &:active {
+                background-color: #cc3b02;
+            }
+        }
+
+        .green {
+            background-color: #9bdb4d;
+            color: #FFF;
+            &:hover {
+                background-color: #68b723;
+            }
+            &:active {
+                background-color: #3a9104;
+            }
+        }
+
+        .purple {
+            background-color: #cd9ef7;
+            color: #FFF;
+            &:hover {
+                background-color: #a56de2;
+            }
+            &:active {
+                background-color: #7239b3;
+            }
+        }
+
+        .yellow {
+            background-color: #ffe16b;
+            color: #FFF;
+            &:hover {
+                background-color: #f9c440;
+            }
+            &:active {
+                background-color: #d48e15;
+            }
+        }
+    }
+}
