@@ -88,4 +88,4 @@ buttons: [
 
 ### PREVIEW
 
-![alt text](https://raw.githubusercontent.com/Mahesh-Ranaweera/popup/master/v2/preview/preview_1.png?token=ADNIAK73R7GYZK7YTRKOFBS5J6V6S "Preview 1")
+![alt text](https://github.com/Mahesh-Ranaweera/POPjs/blob/master/preview/preview_1.png "Preview 1")
